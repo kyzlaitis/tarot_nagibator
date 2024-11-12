@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  phoenix_app:
+    image: elixir:latest
+    container_name: phoenix_app
+    build:
+      context: .
+    environment:
+      - MIX_ENV=dev
+      - DATABASE_URL=ecto://postgres:postgres@db/postgres
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    command: sh -c "mix deps.get && mix ecto.create && mix phx.server"
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: tarot_nagibator_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
