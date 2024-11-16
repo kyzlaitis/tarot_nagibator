@@ -6,6 +6,8 @@ services:
     container_name: phoenix_app
     build:
       context: .
+      dockerfile: Dockerfile
+      target: dev
     environment:
       - MIX_ENV=dev
       - DATABASE_URL=ecto://postgres:postgres@db/postgres
