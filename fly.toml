@@ -8,6 +8,8 @@ primary_region = 'mad'
 kill_signal = 'SIGTERM'
 
 [build]
+  dockerfile = "Dockerfile"
+  build-target = "prod"
 
 [deploy]
   release_command = '/app/bin/migrate'
