@@ -5,7 +5,7 @@ config :tarot_nagibator, TarotNagibator.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "db",
-  database: "tarot_nagibator_dev",
+  database: "tarot-nagibator-db",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
