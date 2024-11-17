@@ -61,7 +61,8 @@ defmodule TarotNagibator.MixProject do
       {:bandit, "~> 1.5"},
       {:poison, "~> 6.0"},
       {:httpoison, "~> 2.2"},
-      {:dotenv_parser, "~> 2.0"}
+      {:dotenv_parser, "~> 2.0"},
+      {:telegex, "~> 1.8"}
     ]
   end
 

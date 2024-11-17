@@ -20,6 +20,9 @@ if System.get_env("PHX_SERVER") do
   config :tarot_nagibator, TarotNagibatorWeb.Endpoint, server: true
 end
 
+# Loads all enviromental variables in .env file which is in a root
+TarotNagibator.EnvLoader.EnvLoader.load(".env")
+
 if config_env() == :prod do
   database_url =
     System.get_env("DATABASE_URL") ||

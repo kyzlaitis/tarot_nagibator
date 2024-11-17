@@ -21,6 +21,9 @@ defmodule TarotNagibatorWeb.Router do
 
     get "/test", PageController, :test
 
+    post "/telegram-kira-777", KiraTarotController, :webhook
+
+
   end
 
   # Other scopes may use custom stacks.
