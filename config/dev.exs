@@ -83,3 +83,7 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+
+config :telegex, token: "7717411615:AAG5-WXevW9dcROYjRwiD0EHSz5AeeXUsoQ"
+config :telegex, caller_adapter: Finch

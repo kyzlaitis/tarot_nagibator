@@ -17,7 +17,8 @@ defmodule TarotNagibator.Application do
       # Start a worker by calling: TarotNagibator.Worker.start_link(arg)
       # {TarotNagibator.Worker, arg},
       # Start to serve requests, typically the last entry
-      TarotNagibatorWeb.Endpoint
+      TarotNagibatorWeb.Endpoint,
+      TarotNagibator.Services.Telegram.PollingHandler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
